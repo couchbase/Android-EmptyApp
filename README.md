@@ -4,14 +4,11 @@ EmptyApp is minimal application that can be used to verify your installation wor
 
 ### Install
 
-    git clone git://github.com/couchbase/Android-EmptyApp.git
-    git clone git://github.com/couchbaselabs/Android-Couchbase.git
+EmptyApp requires Android-Couchbase to run, you can find this @ https://github.com/couchbase/Android-Couchbase, Follow the intructions for `Use existing application` to make sure EmptyApp works with your Android-Couchbase library.
 
-And open both (`File -> Import -> Existing Projects`) projects in eclipse
+### Run
 
-You will need to ensure EmptyApp has the correct path to Android-Couchbase, right click the EmptyApp project and select `Properties -> Android` and in the bottom right make sure to add the Android-Couchbase library.
-
-Now right click the EmptyApp project and select `Run As -> Android Application`, the installation should take around a minute and in the log you should see:
+Right click the EmptyApp project and select `Run As -> Android Application`, the installation should take around a minute and in the log you should see:
 
     V/Couchbase( 1505): Apache CouchDB has started. Time to relax.
     V/Couchbase( 1505): [info] [<0.41.0>] Apache CouchDB has started on http://0.0.0.0:34680/
