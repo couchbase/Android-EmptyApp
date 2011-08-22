@@ -5,7 +5,7 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.couchbase.libcouch.CouchbaseEmbeddedServer;
+import com.couchbase.libcouch.CouchbaseMobile;
 import com.couchbase.libcouch.ICouchClient;
 
 public class EmptyAppActivity extends Activity {
@@ -21,7 +21,7 @@ public class EmptyAppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-		CouchbaseEmbeddedServer couch = new CouchbaseEmbeddedServer(getBaseContext(), mCallback);
+		CouchbaseMobile couch = new CouchbaseMobile(getBaseContext(), mCallback);
 		couchServiceConnection = couch.startCouchbase();
     }
 
