@@ -16,9 +16,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.couchbase.libcouch.CouchService" 
-                 android:enabled="true" 
-                 android:exported="false"></service>
+        <service android:enabled="true" 
+                 android:exported="false" android:name="com.couchbase.android.CouchbaseService"></service>
 
     </application>
     

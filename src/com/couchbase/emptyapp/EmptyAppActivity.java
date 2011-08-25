@@ -5,8 +5,8 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.couchbase.libcouch.CouchbaseMobile;
-import com.couchbase.libcouch.ICouchClient;
+import com.couchbase.android.CouchbaseMobile;
+import com.couchbase.android.ICouchbaseDelegate;
 
 public class EmptyAppActivity extends Activity {
 
@@ -21,13 +21,13 @@ public class EmptyAppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-		CouchbaseMobile couch = new CouchbaseMobile(getBaseContext(), mCallback);
+		CouchbaseMobile couch = new CouchbaseMobile(getBaseContext(), mDelegate);
 		couchServiceConnection = couch.startCouchbase();
     }
 
-	private final ICouchClient mCallback = new ICouchClient.Stub() {
+	private final ICouchbaseDelegate mDelegate = new ICouchbaseDelegate.Stub() {
 		@Override
-		public void couchStarted(String host, int port) {
+		public void couchbaseStarted(String host, int port) {
 			Log.v(TAG, "Couchbase has started");
 		}
 
