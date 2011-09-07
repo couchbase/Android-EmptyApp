@@ -25,7 +25,7 @@ public class EmptyAppActivity extends Activity {
 		couchServiceConnection = couch.startCouchbase();
     }
 
-	private final ICouchbaseDelegate mDelegate = new ICouchbaseDelegate.Stub() {
+	private final ICouchbaseDelegate mDelegate = new ICouchbaseDelegate() {
 		@Override
 		public void couchbaseStarted(String host, int port) {
 			Log.v(TAG, "Couchbase has started");
