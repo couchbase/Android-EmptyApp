@@ -1,5 +1,7 @@
 package com.couchbase.emptyapp;
 
+import java.io.IOException;
+
 import android.app.Activity;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -22,6 +24,13 @@ public class EmptyAppActivity extends Activity {
         setContentView(R.layout.main);
 
 		CouchbaseMobile couch = new CouchbaseMobile(getBaseContext(), mDelegate);
+
+		try {
+			couch.copyIniFile("emptyapp.ini");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 		couchServiceConnection = couch.startCouchbase();
     }
 
