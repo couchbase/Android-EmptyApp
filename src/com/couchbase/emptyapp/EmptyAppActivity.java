@@ -41,10 +41,6 @@ public class EmptyAppActivity extends Activity {
 		}
 
 		@Override
-		public void installing(int completed, int total) {
-		}
-
-		@Override
 		public void exit(String error) {
 		}
 	};
